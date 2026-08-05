@@ -1,0 +1,37 @@
+{
+  "name": "my-resume-page",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "npm run generate:embeddings",
+    "dev": "vite",
+    "fetch:model": "tsx scripts/fetch-model.ts",
+    "generate:embeddings": "tsx scripts/generate-embeddings.ts",
+    "prebuild": "npm run generate:embeddings",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/fraunces": "^5.3.0",
+    "@huggingface/transformers": "^4.2.0",
+    "@radix-ui/react-dialog": "^1.1.23",
+    "@tailwindcss/vite": "^4.3.3",
+    "framer-motion": "^12.43.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "oxlint": "^1.75.0",
+    "tsx": "^4.23.6",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  }
+}
